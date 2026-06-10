@@ -1,3 +1,5 @@
+--creaing table 
+
 CREATE TABLE Student (
     StudentID INT Primary Key,
     Name VARCHAR(50) NOT NULL,
@@ -19,6 +21,7 @@ values
 
 select * from student;
 
+--WHERE clause adding conditions to filter data
 select * from student 
 where age >=21;
 
@@ -28,6 +31,7 @@ where age >=21 and city='Mumbai';
 select * from student 
 where city='Pune' or city='Mumbai';
 
+--ORDER BY clause to sort data
 select * from student 
 order by age desc;
 
@@ -50,35 +54,17 @@ where name like '%i'
 select * from Student
 where name like '%ra%'
 
+--IN operator and BETWEEN operator
 select * from Student
 where city in ('Mumbai', 'Pune');
 
 select * from Student
 where age between 20 and 23;
 
+--ALIAS
 select name as StudentName from Student;
 
-CREATE TABLE Marks(
-    StudentID INT,
-    Subject VARCHAR(30),
-    Marks INT
-);
-
-Insert into Marks values
-(101,'DBMS',90),
-(102,'Java',85),
-(103,'Python',95);
-
-SELECT Student.Name, Marks.Subject, Marks.Marks
-FROM Student
-INNER JOIN Marks
-ON Student.StudentID=Marks.StudentID;
-
-SELECT *
-FROM Student
-RIGHT JOIN Marks
-ON Student.StudentID=Marks.StudentID;
-
+--GROUP BY and HAVING
 SELECT City,COUNT(*)
 FROM Student
 GROUP BY City;
@@ -88,6 +74,7 @@ FROM Student
 GROUP BY City
 HAVING COUNT(*)>1;
 
+-- Aggregate functions
 SELECT SUM(Age)
 FROM Student;
 
