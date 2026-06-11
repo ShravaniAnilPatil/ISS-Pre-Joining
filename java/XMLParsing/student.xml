@@ -1,0 +1,12 @@
+<Institute>
+    <student>
+        <id>101</id>
+        <name>Shravani Patil</name>
+        <department>Information Technology</department>
+    </student>
+    <student>
+        <id>102</id>
+        <name>Aditya Sharma</name>
+        <department>Artificial Intelligence</department>
+    </student>
+</Institute>
